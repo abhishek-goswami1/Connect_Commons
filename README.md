@@ -1,16 +1,61 @@
-# React + Vite
+# Connect Commons
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Connect Commons is a comprehensive Learning Management System (LMS) platform designed to streamline educational workflows, assignment management, and student-teacher interactions. Built with a modern React frontend and a robust Supabase backend.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Authentication & Security:** Secure login and protected routes using Supabase Auth.
+- **Role-Based Access Control:** Distinct workflows and dashboards for Admins (Teachers) and Users (Students).
+- **Assignment Management:** Admins can create, manage, and attach reference files to assignments.
+- **Submission Workflow:** Students can easily submit their assignments and track their status.
+- **Review & Feedback:** Admins can review student submissions and provide direct feedback.
+- **Notifications & Announcements:** Integrated notification system for real-time updates and class announcements.
+- **Activity Tracking:** Comprehensive logging of system activity and submissions.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend:** React, Vite
+- **Styling:** Tailwind CSS, shadcn/ui
+- **Backend & Database:** Supabase (PostgreSQL)
+- **Storage:** Supabase Storage (for assignment reference files and student submissions)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v16 or higher recommended)
+- npm or yarn
+- A Supabase project
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/abhishek-goswami1/Connect_Commons.git
+   cd Connect_Commons
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Set up environment variables:
+   Create a `.env` file in the root directory and add your Supabase credentials (refer to `.env.example` if available):
+   ```env
+   VITE_SUPABASE_URL=your_supabase_url
+   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
+
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+## Database Setup
+
+The `supabase/migrations` folder contains all the necessary SQL scripts to set up the database schema, including tables for profiles, assignments, submissions, notifications, and storage policies. 
+
+## License
+
+This project is licensed under the MIT License.
